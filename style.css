@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /*COLORS*/
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /*NEUTRAL*/
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23.4rem;
+    height: 100%;
+    text-align: center;   
+    font-family: 'League Spartan', sans-serif;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem; 
+}
+
+.headline {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 3.5rem;
+}
+
+.headline h1, .ratings {
+    color: var(--very-dark-magenta);
+}
+
+.headline h1 {
+    margin-bottom: 1rem;
+    line-height: 1.62rem;
+}
+
+.headline p {
+    color: var(--dark-grayish-magenta);
+    line-height: 1.25rem;
+}
+
+.rating {
+    margin-bottom: 3rem;
+}
+
+.rating h4 {
+    margin-top: 0.8rem;
+}
+
+.testimonials {
+    display: grid;
+    justify-items: center;
+    width: 80%;
+}
+
+.testimonials h2 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.testimonials h3 {
+    color: var(--soft-pink);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.testimonial {
+    height: 11rem;
+    width: 80%;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+}
+
+.testimonial img {
+    clip-path: circle();
+    width: 1.85rem;
+    position: relative;
+    right: 5.1rem;
+    top: 5px;
+}
+
+.testimonial h2, .testimonial h3 {
+    position: relative;
+    top: -1.5rem;
+    right: 1rem;
+    font-size: 0.8rem;
+}
+
+.testimonial p {
+    margin-top: -0.5rem;
+    color: white;
+    font-size: 0.78rem;
+    text-align: left;
+    line-height: 1rem;
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+    .container {
+        display: grid;
+        grid-template-areas: "a1 a1 a2 a2"
+                             "a3 a3 a3 a3";
+        width: 75rem;
+        height: 42.5rem;
+        justify-content: space-evenly;
+        
+    }
+
+    .headline {
+        grid-area: a1;
+        text-align: left;
+        max-width: 22.5rem;
+    }
+
+    .headline h1 {
+        font-size: 3rem;
+        padding: 0;
+        line-height: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .ratings {
+        grid-area: a2;
+        transform: translate(0, 35%);
+    }
+
+    .rating {
+        display: flex;
+        line-height: 0.4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .rating img {
+        width: 0.93rem;
+        height: 0.83rem;
+        margin-right: 0.5rem;
+    }
+
+    .rating:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .rating:nth-child(2) {
+        margin-left: 2.5rem;
+    }
+
+    .rating:nth-child(3) {
+        margin-left: 5rem;
+    }
+
+    .rating h4 {
+        margin-left: 1.25rem;
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+
+    .testimonials {
+        display: flex;
+        flex-direction: row;
+        grid-area: a3;
+        margin: auto;
+        transform: translate(-1%, -30%);
+    }
+
+    .testimonial {
+        width: 22.5rem;
+        height: 11.5rem;
+        margin-right: 1.75rem;
+    }
+
+    .testimonial p {
+        max-width: 95%;
+        margin: auto;
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+        letter-spacing: 0.25px;
+    }
+
+    .testimonial #son2 {
+        max-width: 90%;
+    }
+
+    .testimonial img {
+        margin-left: -2rem;
+    }
+
+    .testimonial h2 {
+        letter-spacing: 0.4px;
+        text-indent: 5.5px;
+    }
+
+    .testimonial h2, .testimonial h3 {
+        font-size: 0.75rem;
+        margin-left: -2rem;
+    }
+
+    .testimonial:nth-child(2) {
+        transform: translateY(10%);
+    }
+
+    .testimonial:nth-child(3) {
+        transform: translateY(20%);
+    }
+
+}
